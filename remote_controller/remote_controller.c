@@ -120,18 +120,7 @@ void main (void)
 	
 	joy_stick_init();
 	IR_emitter_init();
-	//usart_init();
-
-	 waitms(500); 
-	printf("\x1b[2J"); // Clear screen 
-	
-	printf ("Remote Controller Test\n"
-	        "File: %s\n"
-	        "Compiled: %s, %s\n\n",
-	        __FILE__, __DATE__, __TIME__);
-	        
-	send_data(9);        
-
+      
 	while(1)
 	{
 		read_joystick(&rds, 10);

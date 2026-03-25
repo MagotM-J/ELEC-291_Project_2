@@ -28,27 +28,6 @@ void Timer0_ISR (void) interrupt INTERRUPT_TIMER0{
 	} else {
 		TX_PIN = 0;
 	}
-	// if(tx_active == 0){
-	// 	TX_PIN = 0;
-	// 	TickCount = 0;
-	// 	bit_pos = 0;
-	// } else {
-	// 	if(TickCount < I_CYCLES){
-	// 		TX_PIN = !TX_PIN;
-	// 		TickCount++;
-	// 	} else {
-	// 		if(bit_pos >= /*sizeof(tx_data)**/8){// All bits have been sent
-	// 				tx_active = 0;
-	// 		}
-	// 		TX_PIN = 0;
-	// 		if(TickCount >= (2*I_CYCLES + ((tx_data >> bit_pos) & 0x1)*BIT_CYCLES)){
-	// 			bit_pos++;
-	// 			TickCount = 0;
-	// 		}else {
-	// 			TickCount++;
-	// 		}
-	// 	}
-	// }
 }
 
 
@@ -82,5 +61,6 @@ int send_data(uint8_t s_data){
 	// return 0;
 
 	//usart_putchar(s_data & 0xFF);
+	return s_data;  // placeholder
 }
 
