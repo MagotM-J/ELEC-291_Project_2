@@ -1,0 +1,10 @@
+*.inc
+*.asm
+*.lst
+*.hex
+*.o
+*.obj
+*.lkr
+*.map
+*.elf
+*.bat
